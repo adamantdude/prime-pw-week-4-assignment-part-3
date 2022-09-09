@@ -33,6 +33,7 @@ function isFull() {
 }
 
 function removeItem(item) {
+    // if the index of item is found in the array, delete it. otherwise, return null
     if(basket.indexOf(item) >= 0) return basket.splice(basket.indexOf(item), 1);
     return null;
 }
@@ -45,6 +46,7 @@ let i=0;
 console.log('TESTING addItem() functon:');
 // while we can keep adding items from the market
 while(addItem(market[i])) ++i;
+// variable i is now equal to 5
 console.log(basket);
 
 console.log('TESTING listItems() function: ');
@@ -57,6 +59,7 @@ listItems();
 
 console.log('Calling addItem() function for removeItem() testing: ');
 while(addItem(market[i])) ++i;
+// variable i is now equal to 10
 console.log('Calling listItems() after second addItem() call: ');
 listItems();
 
@@ -66,3 +69,5 @@ console.log('TESTING removeItem() function for "cilantro"; result should be remo
 console.log('basket array is: ', basket);
 console.log('TESTING removeItem() function for index zero item, "potato"; result should be removed item: ', removeItem('potato'));
 console.log('basket array is: ', basket);
+
+// --- END DEBUG ---
