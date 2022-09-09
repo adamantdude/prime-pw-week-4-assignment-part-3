@@ -1,8 +1,12 @@
 console.log('***** Cart Functions *****');
 // Make sure to test all functions here in the JS file!
 // We want to see how you are testing your code!!!
+
 var basket = [];
 const maxItems = 5;
+
+// I learned to prototype and build functions first before testing in code using C/C++ and Java
+// I will stick to this workflow since it feels natural to me.
 
 function addItem(item) {
     // if not full, !false = true
@@ -40,11 +44,13 @@ function removeItem(item) {
 
 // ---------- Debug and Testing Code ----------
 
+// array with 10 items
 let market = ['banana', 'kiwi', 'pomegranate', 'lemon', 'lime', 'potato', 'tomato', 'cilantro', 'green onions', 'cucumber'];
 let i=0;
 
 console.log('TESTING addItem() functon:');
 // while we can keep adding items from the market
+// works as a condition since addItem() returns true or false
 while(addItem(market[i])) ++i;
 // variable i is now equal to 5
 console.log(basket);
